@@ -42,6 +42,7 @@ export const data = {
       numReview: 3,
       countInStock: 20,
       description: "A popular shirt",
+      banner: "/images/banner2.jpg",
     },
     {
       _id: "4",
@@ -55,6 +56,7 @@ export const data = {
       numReview: 13,
       countInStock: 20,
       description: "Smart looking pants",
+      banner: "/images/banner2.jpg",
     },
     {
       _id: "5",
@@ -68,6 +70,7 @@ export const data = {
       numReview: 7,
       countInStock: 20,
       description: "A popular pants",
+      banner: "/images/banner2.jpg",
     },
     {
       _id: "6",
@@ -81,6 +84,7 @@ export const data = {
       numReview: 14,
       countInStock: 20,
       description: "A popular pants",
+      banner: "/images/banner2.jpg",
     },
   ],
 };
