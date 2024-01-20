@@ -37,6 +37,25 @@ export default function useCartService() {
               : i
           )
         : [...items, { ...item, quantity: 1 }];
+      const { itemPrice, tax, totalPrice, shippingPrice } =
+        calcPrice(updatedCartItems);
+      cartStore.setState({
+        items: updatedCartItems,
+        itemPrice,
+        tax,
+        totalPrice,
+        shippingPrice,
+      });
     },
   };
 }
+
+const calcPrice = (items: OrderItem[]) => {
+  const itemPrice = round2(
+      items.reduce((acc, item) => acc + item.price * item.quantity, 0)
+    ),
+    shippingPrice = round2(itemPrice > 100 ? 0 : 100),
+    tax = round2(Number(0.18 * itemPrice)),
+    totalPrice = round2(itemPrice + tax + shippingPrice);
+  return { itemPrice, shippingPrice, tax, totalPrice };
+};
