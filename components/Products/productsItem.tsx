@@ -20,7 +20,7 @@ const ProductsItem = ({ product }: { product: Product }) => {
     slug,
   } = product;
   return (
-    <div className="max-w-xs mx-2 my-4 p-4 bg-white shadow-md rounded-md">
+    <div className="max-w-xs mx-2 my-4 p-4 bg-white shadow-md rounded-md dark:bg-black">
       <Link href={`/product/${slug}`}>
         <img src={image} alt={name} className="w-full h-48 object-cover mb-4" />
 

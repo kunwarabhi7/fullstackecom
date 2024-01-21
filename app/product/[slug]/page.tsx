@@ -1,3 +1,4 @@
+import AddToCart from "@/components/Products/AddToCart";
 import { data } from "@/lib/Data";
 import { Product } from "@/lib/models/product.models";
 import Link from "next/link";
@@ -10,6 +11,17 @@ const page = ({ params }: { params: Product }) => {
     <div>
       <Link href="/">Back to Products</Link>
       <h1>{product.name}</h1>
+      <AddToCart
+        item={{
+          name: "",
+          slug: "",
+          quantity: 0,
+          image: "",
+          price: 0,
+          color: "",
+          size: "",
+        }}
+      />
     </div>
   );
 };
