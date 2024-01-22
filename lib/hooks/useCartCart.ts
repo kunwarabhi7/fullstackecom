@@ -47,6 +47,27 @@ export default function useCartService() {
         shippingPrice,
       });
     },
+    decreaseItem: (item: OrderItem) => {
+      const existingItem = items.find((x) => x.slug === item.slug);
+      if (!existingItem) return;
+      const updatedCartItems =
+        existingItem.quantity === 1
+          ? items.filter((x: OrderItem) => x.slug !== item.slug)
+          : items.map((x: OrderItem) =>
+              x.slug === item.slug
+                ? { ...existingItem, quantity: existingItem.quantity - 1 }
+                : x
+            );
+      const { itemPrice, tax, totalPrice, shippingPrice } =
+        calcPrice(updatedCartItems);
+      cartStore.setState({
+        itemPrice,
+        items: updatedCartItems,
+        totalPrice,
+        tax,
+        shippingPrice,
+      });
+    },
   };
 }
 

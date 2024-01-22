@@ -7,7 +7,7 @@ import { OrderItem } from "@/lib/models/order.models";
 
 const AddToCart = ({ item }: { item: OrderItem }) => {
   const router = useRouter();
-  const { increaseItem, items } = useCartService();
+  const { increaseItem, items, decreaseItem } = useCartService();
   const [existedItems, setExistedItems] = useState<OrderItem | undefined>();
 
   useEffect(() => {
@@ -23,7 +23,7 @@ const AddToCart = ({ item }: { item: OrderItem }) => {
       {/* Check if the item already exists in the cart */}
       {existedItems ? (
         <div>
-          <button>-</button>
+          <button onClick={() => decreaseItem(existedItems)}>-</button>
           <span>{existedItems.quantity}</span>
           <button onClick={() => increaseItem(existedItems)}>+</button>
         </div>
