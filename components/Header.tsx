@@ -3,6 +3,7 @@ import { DarkModeToggle } from "./DarkModeToggler";
 import Image from "next/image";
 import Logo from "@/public/amazon.png";
 import { ShoppingCart } from "lucide-react";
+import ShoppingCartCom from "./ShoppingCartCom";
 const Header = () => {
   return (
     <header className="flex items-center justify-between">
@@ -15,6 +16,7 @@ const Header = () => {
       </Link>
       <DarkModeToggle />
       <ShoppingCart />
+      <ShoppingCartCom />
     </header>
   );
 };
