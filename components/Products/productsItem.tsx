@@ -2,6 +2,7 @@ import { data } from "@/lib/Data";
 import { Product } from "@/lib/models/product.models";
 import Image from "next/image";
 import Link from "next/link";
+import AddToCart from "./AddToCart";
 
 const ProductsItem = ({ product }: { product: Product }) => {
   const {
@@ -37,9 +38,14 @@ const ProductsItem = ({ product }: { product: Product }) => {
           <p className="text-gray-500">Stock: {countInStock} available</p>
         </div>
       </Link>
-      <button className="mt-4 bg-amazon-yellow text-amazon-blue py-2 px-4 rounded-full hover:bg-amazon-yellow-dark">
-        Add to Cart
-      </button>
+      <AddToCart
+        item={{
+          ...product,
+          quantity: 0,
+          color: "",
+          size: "",
+        }}
+      />
     </div>
   );
 };

@@ -6,6 +6,7 @@ import React from "react";
 
 const page = ({ params }: { params: Product }) => {
   const product = data.Product.find((x) => x.slug === params.slug);
+  console.log(product);
   if (!product) return <h1>No Page Found</h1>;
   return (
     <div>
