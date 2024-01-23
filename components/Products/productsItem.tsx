@@ -27,7 +27,7 @@ const ProductsItem = ({ product }: { product: Product }) => {
 
         <h3 className="text-lg font-semibold">{name}</h3>
         <p className="text-gray-600">${price}</p>
-        <p className="text-gray-500">{description}</p>
+        <p className="text-gray-500">{description} </p>
 
         <div className="mt-2">
           <p className="text-gray-500">Brand: {brand}</p>
