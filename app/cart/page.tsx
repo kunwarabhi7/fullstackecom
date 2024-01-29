@@ -1,5 +1,11 @@
+import CartDetails from "./cartdetail";
+
 const CartPage = () => {
-  return <div>page</div>;
+  return (
+    <div>
+      <CartDetails />
+    </div>
+  );
 };
 
 export default CartPage;
