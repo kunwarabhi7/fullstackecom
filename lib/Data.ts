@@ -16,7 +16,6 @@ export const data = {
   ],
   Product: [
     {
-      _id: "1",
       name: "Free Shirt",
       slug: "free-shirt",
       category: "Shirts",
@@ -31,7 +30,6 @@ export const data = {
       banner: "/images/shirt1.jpg",
     },
     {
-      _id: "2",
       name: "Fit Shirt",
       slug: "fit-shirt",
       category: "Shirts",
@@ -46,7 +44,6 @@ export const data = {
       banner: "/images/banner2.jpg",
     },
     {
-      _id: "3",
       name: "Slim Shirt",
       slug: "slim-shirt",
       category: "Shirts",
@@ -60,7 +57,6 @@ export const data = {
       banner: "/images/banner2.jpg",
     },
     {
-      _id: "4",
       name: "Golf Pants",
       slug: "golf-pants",
       category: "Pants",
@@ -74,7 +70,6 @@ export const data = {
       banner: "/images/banner2.jpg",
     },
     {
-      _id: "5",
       name: "Fit Pants",
       slug: "fit-pants",
       category: "Pants",
@@ -88,7 +83,6 @@ export const data = {
       banner: "/images/banner2.jpg",
     },
     {
-      _id: "6",
       name: "Classic Pants",
       slug: "classic-pants",
       category: "Pants",

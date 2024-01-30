@@ -15,24 +15,26 @@ const ProductSchema = new mongoose.Schema(
     isFeatured: { type: Boolean, default: false },
     banner: String,
   },
-  { timestamps: true }
+  {
+    timestamps: true,
+  }
 );
 
 export const ProductModel =
   mongoose.models.ProductModel || mongoose.model("ProductModel", ProductSchema);
 
 export type Product = {
-  _id: string;
+  _id?: string;
   name: string;
   slug: string;
   image: string;
-  banner: string;
+  banner?: string;
   price: number;
-  description: string;
   brand: string;
+  description: string;
   category: string;
   rating: number;
-  numReview: number;
+  numReviews: number;
   countInStock: number;
   colors?: [];
   sizes?: [];
